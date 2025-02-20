@@ -76,8 +76,4 @@ Desvio Padrão: 150.7 ns
 - Permitir a personalização dos tamanhos de array via entrada do usuário.
 
 ## Autor
-Criado por [Seu Nome].
-
-## Licença
-Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
-
+Criado por [Pedro Thomas](www.linkedin.com/in/pedro-gustavo-thomas-5935392b7).
