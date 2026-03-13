@@ -1,79 +1,54 @@
-# Gerador de Arrays e Testes de Algoritmos de Ordenação
+# Comparação de Algoritmos de Ordenação
 
-Este projeto implementa um gerador de arrays de diferentes tipos e tamanhos para testar diversos algoritmos de ordenação. Ele mede o tempo de execução de cada algoritmo em diferentes cenários e calcula métricas estatísticas como média e desvio padrão.
+Implementação e benchmark de 7 algoritmos de ordenação em Java, com medição de desempenho em diferentes tipos e tamanhos de arrays.
 
-## Funcionalidades
-- Gera arrays em diferentes formatos:
-  - Crescente
-  - Decrescente
-  - Aleatório sem repetição
-  - Aleatório com repetição
-- Executa e mede o tempo de execução de vários algoritmos de ordenação:
-  - Bubble Sort
-  - Insertion Sort
-  - Selection Sort
-  - Heap Sort
-  - Shell Sort
-  - Merge Sort
-  - Quick Sort
-- Calcula estatísticas dos tempos de execução:
-  - Média
-  - Desvio padrão
+## Sobre
+
+O projeto executa cada algoritmo 10 vezes por cenário e calcula média e desvio padrão do tempo de execução (em nanossegundos), permitindo comparar o comportamento de cada algoritmo em condições variadas.
+
+## Algoritmos implementados
+
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
+- Heap Sort
+- Shell Sort
+- Merge Sort
+- Quick Sort
+
+## Tipos de array testados
+
+- Crescente
+- Decrescente
+- Aleatório sem repetidos
+- Aleatório com repetidos
+
+## Tamanhos testados
+
+128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 elementos.
+
+## Tecnologias
+
+- Java (Arrays, Collections, Streams)
 
 ## Como executar
-1. Compile o programa usando o seguinte comando:
-   ```bash
-   javac GeradorDeArrays.java
-   ```
-2. Execute o programa:
-   ```bash
-   java GeradorDeArrays
-   ```
 
-O programa gerará e testará os arrays para diferentes algoritmos de ordenação e tamanhos predefinidos.
-
-## Estrutura do Código
-- **`gerarArrayCrescente(int tamanho)`**: Gera um array ordenado em ordem crescente.
-- **`gerarArrayDecrescente(int tamanho)`**: Gera um array ordenado em ordem decrescente.
-- **`gerarArrayAleatorioSemRepetidos(int tamanho)`**: Gera um array aleatório sem valores repetidos.
-- **`gerarArrayAleatorioComRepetidos(int tamanho)`**: Gera um array aleatório com valores repetidos.
-- **`testarAlgoritmos(String tipo, int[] arrayOriginal)`**: Mede o tempo de execução de cada algoritmo de ordenação e calcula estatísticas.
-- **`calcularMedia(long[] tempos)`**: Calcula a média dos tempos de execução.
-- **`calcularVariancia(long[] tempos, double media)`**: Calcula a variância dos tempos de execução.
-- **Algoritmos de ordenação implementados**:
-  - `bubbleSort(int[] array)`
-  - `insertionSort(int[] array)`
-  - `selectionSort(int[] array)`
-  - `heapSort(int[] array)`
-  - `shellSort(int[] array)`
-  - `mergeSort(int[] array, int esquerda, int direita)`
-  - `quickSort(int[] array, int esquerda, int direita)`
-
-## Exemplo de Saída
 ```bash
-Tamanho do array: 128
-Tipo de array: Crescente
-Algoritmo: bubbleSort
-Tempos das 10 execuções (em nanossegundos): [12345, 13456, 12567, ...]
-Média: 12900.5 ns
-Desvio Padrão: 450.3 ns
-
-Tipo de array: Decrescente
-Algoritmo: quickSort
-Tempos das 10 execuções (em nanossegundos): [5678, 5987, 5600, ...]
-Média: 5788.2 ns
-Desvio Padrão: 150.7 ns
-...
+javac GeradorDeArrays.java
+java GeradorDeArrays
 ```
 
-## Requisitos
-- Java 8 ou superior instalado
+A saída exibe, para cada combinação de tamanho e tipo de array, os tempos de cada execução, a média e o desvio padrão de cada algoritmo.
 
-## Possíveis Melhorias
-- Adicionar mais algoritmos de ordenação.
-- Melhorar a visualização dos resultados.
-- Implementar paralelização para testes mais rápidos.
-- Permitir a personalização dos tamanhos de array via entrada do usuário.
+## Estrutura do projeto
 
-## Autor
-Criado por [Pedro Thomas](www.linkedin.com/in/pedro-gustavo-thomas-5935392b7).
+```
+└── GeradorDeArrays.java   # Geração dos arrays, implementação dos algoritmos e benchmark
+```
+
+## Conceitos praticados
+
+- Algoritmos de ordenação clássicos
+- Análise de complexidade na prática
+- Medição e comparação de desempenho
+- Estatística básica (média e desvio padrão)
